@@ -37,7 +37,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    color-scheme: only light;
+    background-color: var(--cor-background);
+    color: var(--carvao-prancha);
+}
 body{
+    color: var(--carvao-prancha);
     font-family: var(--fonte-texto);
     background-color: var(--cor-background);
     background-image: radial-gradient(var(--cor-dots) 1.2px, transparent 1.2px);
@@ -720,6 +726,24 @@ letter-spacing: -4%;
 @media (max-width: 768px) {
 
     .logo, .menu-toggle { position: relative; z-index: 11; }
+
+    /* menu aberto: a página fica parada atrás (o JS guarda a posição em "top") */
+    body.menu-aberto {
+        position: fixed;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+
+    /* logo e X ficam presos no topo enquanto o menu está aberto */
+    header { min-height: var(--altura-header); }
+    body.menu-aberto .header-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 11;
+    }
 
     #menu-nav ul {
     height: 100dvh;
