@@ -2,6 +2,7 @@
 
 
 :root{
+    color-scheme: only light;
     --cor-surface: #FBF9F4;   /* superfície clara (cards) */
     --cor-background: #F4F1EA;   /* fundo do site */
     --cor-surface-hover: #EAE5DA;   /* hover e superfície elevada */
@@ -721,6 +722,9 @@ letter-spacing: -4%;
     .logo, .menu-toggle { position: relative; z-index: 11; }
 
     #menu-nav ul {
+    height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
     display: none;
     position: fixed;
     inset: 0;
@@ -743,13 +747,13 @@ letter-spacing: -4%;
     }
     #menu-nav li:last-child { 
         border-bottom: none; 
-        margin-top: auto; 
+        margin-top: 24px;
     } 
 
     #menu-nav a {
     display: block;
-    padding: 20px 0;
-    font: 800 40px/1 var(--fonte-titulo);
+    padding: 16px 0;
+    font-size: 32px;
     letter-spacing: -.04em;
     color: var(--carvao-prancha);
     border-bottom: none;

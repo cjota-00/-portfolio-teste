@@ -5,6 +5,8 @@ function setMenu(aberto) {
   menu.classList.toggle('active', aberto);
   menuToggle.setAttribute('aria-expanded', aberto);
   menuToggle.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+  // trava a página de trás do menu
+  document.body.style.overflow = aberto ? 'hidden' : '';
 }
 
 menuToggle.addEventListener('click', () => {
