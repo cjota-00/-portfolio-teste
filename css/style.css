@@ -469,9 +469,7 @@ main > section:not(.hero-palco) {
 }
 
 .case-coluna-texto h3{
-    font-size: 80px;
-    font-weight: 700;
-    letter-spacing: -7%;
+    font-size: clamp(2.375rem, 1.771rem + 2.476vw, 4rem); /* 38px → 64px */
 }
 .case-coluna-texto p{
     font-weight: 100;
@@ -653,7 +651,7 @@ letter-spacing: -4%;
 }
 
 .contato h2 {
-  font: 800 150px/.9 var(--fonte-titulo);
+  font-size: clamp(4rem, 2rem + 8.19vw, 9.375rem);
   letter-spacing: -.055em;
 }
 
@@ -801,13 +799,6 @@ letter-spacing: -4%;
         padding: 24px;
     }
 
-    .select_cases h2 {
-        font-size: 40px; /* Reduzido de 80px */
-        margin-top: 12px;
-    }
-     .case-coluna-texto h3 {
-        font-size: 36px; /* Reduzido de 80px para não quebrar linha agressivamente */
-    }
 
      .espe {
         flex-direction: column; /* Empilha as informações se o espaço for curto */
@@ -828,14 +819,6 @@ letter-spacing: -4%;
     }
 
     /* sobre */
-     #sobre h2 {
-        font-size: 40px; /* Reduzido de 80px */
-        margin-top: 12px;
-    }
-     #sobre h3 {
-        font-size: 36px; /* Reduzido de 80px para não quebrar linha agressivamente */
-    }
-
     #sobre .content{
         display: flex;
         flex-direction: column;
@@ -850,7 +833,7 @@ letter-spacing: -4%;
     }
 
     #sobre .content .right p{
-        font-size: 16pxpx;
+        font-size: 16px;
     }
 
    #sobre .ferramentas {
@@ -860,7 +843,7 @@ letter-spacing: -4%;
     gap: 20px;
   }
 
-  .contato h2 { font-size: 64px; }
+
   .contato__texto { font-size: 17px; }
   .contato__email { font-size: 22px; }
   .rodape__conteudo { flex-direction: column; gap: 6px; }
