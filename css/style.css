@@ -38,6 +38,7 @@
     box-sizing: border-box;
 }
 html{
+    overflow-x: clip;       /* segurança: nada vaza para os lados no celular */
     color-scheme: only light;
     background-color: var(--cor-background);
     color: var(--carvao-prancha);
@@ -271,11 +272,13 @@ header{
 
 
 .cursor{
+    display: none;          /* só aparece com mouse (classe .cursor-ativo, via JS) */
     position: absolute;
     right: 16%;
     top: 350px;
     pointer-events: none;
 }
+.cursor-ativo .cursor { display: block; }
 
 .cursor__nome{
     position: absolute;
